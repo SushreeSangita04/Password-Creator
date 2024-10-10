@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    margin: 12%;
+    width: 90%;
+    max-width: 600px;
+}
+#password{
+  font-size: 20px;
+  width: 80%;
+  padding: 10px;
+  margin: 5px;
+}
+#generate{
+    cursor: pointer;
+    color: green;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h3>Generate a <span>Random Password</span></h3>
+        <input type="text" id="password" placeholder="Password">
+        <button id="generate" onclick="generate()">Generate Password</button>
+    </div>
+    <script>
+        let password=document.getElementById("password");
+        let length=12;
+        let upperCase="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        let lowerCase="abcdefghijklmnopqrstuvwxyz";
+        let num="0123456789";
+        let spc="!@#$%^&*";
+        const allc=lowerCase+num+spc;
+   function generate(){
+     let pass="";
+     pass+=lowerCase[Math.floor(Math.random() *lowerCase.length)];
+     pass+=num[Math.floor(Math.random() *num.length)];
+     pass+=spc[Math.floor(Math.random() *spc.length)];
+     while(length>pass.length){
+        pass+=allc[Math.floor(Math.random() *allc.length)];
+     }
+     password.value=pass;
+   }
+    </script>
+</body>
+</html>
+
+
+
